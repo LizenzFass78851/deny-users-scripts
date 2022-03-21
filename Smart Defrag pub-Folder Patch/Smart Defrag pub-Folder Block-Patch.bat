@@ -34,10 +34,9 @@ if %lang%==en goto :deny-users-eng
 @echo SYSTEM >> deny-user-lists.txt
 goto :run-task
 :deny-users-eng
-echo Leider derzeit keine Unterstützung für Englische Benutzerkonten
-echo Umstellung auf SID statt Anzeigename zum Verweigern von nutzerrechte dauert noch
-timeout 10
-exit
+@echo Users > deny-user-lists.txt
+@echo Administrators >> deny-user-lists.txt
+@echo SYSTEM >> deny-user-lists.txt
 goto :run-task
 
 :run-task
